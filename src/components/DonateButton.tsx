@@ -10,7 +10,11 @@ export default function DonateButton() {
     try {
       const res = await fetch('/api/checkout', { method: 'POST' })
       const data = await res.json()
-      if (data.url) window.location.href = data.url
+      if (data.url) {
+        window.location.href = data.url
+      } else {
+        setLoading(false)
+      }
     } catch {
       setLoading(false)
     }
@@ -22,7 +26,12 @@ export default function DonateButton() {
       disabled={loading}
       className="donate-btn"
     >
-      {loading ? 'Redirecting…' : '☕ Buy me a coffee — $5'}
+      {loading ? 'Redirecting…' : (
+        <>
+          <span className="donate-btn__full">☕ Buy me a coffee — $5</span>
+          <span className="donate-btn__short">☕ $5</span>
+        </>
+      )}
     </button>
   )
 }

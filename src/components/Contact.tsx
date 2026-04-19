@@ -1,5 +1,3 @@
-import DonateButton from './DonateButton'
-
 const links = [
   {
     label: 'Email',
@@ -30,25 +28,22 @@ export default function Contact() {
               <span>together.</span>
             </h2>
           </div>
-          <div className="contact__right">
-            <div className="contact__links">
-              {links.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.href.startsWith('mailto') ? undefined : '_blank'}
-                  rel={link.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                  className="contact__link"
-                >
-                  <span>
-                    <span className="contact__link-label">{link.label}</span>
-                    {link.value}
-                  </span>
-                  <span className="contact__link-arrow">→</span>
-                </a>
-              ))}
-            </div>
-            <DonateButton />
+          <div className="contact__links">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith('mailto') ? undefined : '_blank'}
+                rel={link.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                className="contact__link"
+              >
+                <span>
+                  <span className="contact__link-label">{link.label}</span>
+                  {link.value}
+                </span>
+                <span className="contact__link-arrow">→</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
