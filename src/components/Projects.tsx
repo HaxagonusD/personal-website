@@ -2,11 +2,19 @@ import HoverCard from './HoverCard'
 
 const projects = [
   {
+    emoji: '🎬',
+    name: 'Animation Helper',
+    label: 'Video Annotation Tool',
+    desc: 'Frame-by-frame video annotation tool for animators. Place named coordinate points across keyframes and export JSON to feed into an LLM for Remotion code generation.',
+    color: 'proj-card--white',
+    link: null,
+  },
+  {
     emoji: '📊',
     name: 'Cost Estimator',
     label: 'AI Cost Analytics',
     desc: 'OpenRouter cost analytics dashboard. Tracks spend, token usage, and model costs across providers with charts and breakdowns.',
-    color: 'proj-card--white',
+    color: 'proj-card--warm',
     link: 'https://cost-estimator-dashboard-8v8yakez5-haxagonusdyad-5633s-projects.vercel.app',
   },
   {
@@ -14,7 +22,7 @@ const projects = [
     name: 'Harmony Social',
     label: 'Oct 2020 – Jan 2021',
     desc: 'Music-focused social platform with Twilio and Spotify APIs. React SPA served by Express with a Node.js background worker.',
-    color: 'proj-card--warm',
+    color: 'proj-card--pale',
     link: null,
   },
   {
@@ -22,7 +30,7 @@ const projects = [
     name: 'Strawberry Sound',
     label: 'Feb – Mar 2021',
     desc: 'Shazam-like song identification tool. Recognized 2,000+ songs in two weeks using Web APIs and AuD Music Recognition.',
-    color: 'proj-card--pale',
+    color: 'proj-card--orange',
     link: null,
   },
   {
@@ -30,7 +38,7 @@ const projects = [
     name: 'Hackathon Wins',
     label: '2022 – 2023',
     desc: '1st at Citi Bank (Google Cloud Vision ML). 2nd at Valtech × Create Labs (GPT-3 resume summarizer). Two wins, two different stacks.',
-    color: 'proj-card--orange',
+    color: 'proj-card--white',
     link: null,
   },
 ]
